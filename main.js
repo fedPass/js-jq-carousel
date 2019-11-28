@@ -33,25 +33,15 @@ $(document).ready(function(){
         //devo prendere l'i del pallino
         var indexBullet = $(this).index();
         console.log('hai cliccato sul pallino in posizione: ' + indexBullet);
-        // var bulletCurrent = $('i.active');
-        // bulletCurrent.removeClass('active');
-        // $(this).addClass('active');
+
+        var bulletCurrent = $('i.active');
+        bulletCurrent.removeClass('active');
+        $(this).addClass('active');
 
         //deve diventare active la img con i uguale a indexBullet
-        // var fotoCorrispondente = $('img[indexBullet]');
-        // $('img[indexBullet]').addClass('active');
-
-        // //dovrei rimuovere active da quella attuale per agg a quello in posizione indexBullet
-        // var imgCurrent = $('img.active');
-        // var bulletCurrent = $('i.active');
-        // imgCurrent.removeClass('active');
-        // bulletCurrent.removeClass('active');
-        //
-        // //prendi in div con le img --> $('.img-container')
-        // //trova img in posizione (indexBullet)
-        // //aggiungigli la classe active --> .addClass('active');
-        // // $('.img-container').find('img[indexBullet]').addClass('active');
-        // $('.img-container').children([img[indexBullet]).addClass('active');
-        // $('.bullet-container').children([i[indexBullet]).addClass('active');
+        var fotoCurrent = $('img.active');
+        fotoCurrent.removeClass('active');
+        var fotoCorrispondente = $('.img-container img').eq(indexBullet);
+        fotoCorrispondente.addClass('active');
     });
 })
